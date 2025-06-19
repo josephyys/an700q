@@ -1,5 +1,9 @@
-# Ignore everything in build directory
-build/
-
-# But keep .hex files
+# Ignore build directory contents except .hex files
+build/*
+!build/*.hex
 !build/**/*.hex
+
+# If .hex files are nested deeper, be explicit about paths
+!build/zephyr/
+build/zephyr/*
+!build/zephyr/*.hex
